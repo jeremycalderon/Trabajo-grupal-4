@@ -7,7 +7,7 @@ from numpy import pi, sin, cos, sqrt, arccos, arctan2
 
 from calcular import calcular_resultados
 
-# Función para actualizar el valor en los Label
+#Funciones para las entradas
 def update_slider_value1(val):
     integer_val = int(float(val))
     value_label1.config(text=f"{integer_val} °")
@@ -40,7 +40,7 @@ def get_O4y():
     return(integer_val)
 
 def get_P2x():
-    integer_val = float(P2x_input.get())  # Convertir el valor a entero
+    integer_val = float(P2x_input.get())
     return(integer_val)
 
 def get_P2y():
@@ -67,6 +67,7 @@ def get_t3():
     integer_val = int(slider3.get())
     return(integer_val)
 
+#Función para el botón CALCULAR
 def update():
     t1 = get_t1()
     t2 = get_t2()
@@ -86,20 +87,20 @@ def update():
 #Ventana principal
 root = tk.Tk()
 root.title("TAREA 4 - TEORÍA DE MÁQUINAS Y MECANISMOS")
-root.configure(bg="#99fa73")
+root.configure(bg="#d6d6d6")
 root.option_add('*TButton*Font', 'CenturyGothic 12')
-root.geometry("1100x500")
+root.geometry("1000x485")
 root.resizable(False, False)
 
 #Marcos
-left_frame = tk.Frame(root, bg="#29eaff")
-left_frame.place(x=15, y=15)
+left_frame = tk.Frame(root, bg="blue")
+left_frame.place(x=10, y=10)
 
-middle_frame = tk.Frame(root, bg="#29eaff")
-middle_frame.place(x=375, y=35)
+middle_frame = tk.Frame(root, bg="blue")
+middle_frame.place(x=360, y=25)
 
-right_frame = tk.Frame(root, bg="#29eaff")
-right_frame.place(x=720, y=80)
+right_frame = tk.Frame(root, bg="blue")
+right_frame.place(x=700, y=70)
 
 #COLOCAR LOGOS E INFORMACIÓN EN EL MARCO MIDDLE
 universidad = tk.Label(middle_frame, text="UNIVERSIDAD NACIONAL DE TRUJILLO", bg="#29eaff", fg="black")
@@ -130,91 +131,91 @@ integrante2.grid(row=7, column=0, padx=20, pady=(2, 10))
 
 #CONFIGURAR ENTRADAS EN EL MARCO LEFT
 # Coordenada x de O2
-O2x_label = tk.Label(left_frame, text="Coordenada x de O2", bg="#114045", fg="white")
+O2x_label = tk.Label(left_frame, text="Coordenada x de O2", bg="#29eaff", fg="black")
 O2x_label.grid(row=0, column=0, padx=10, pady=(10, 5))
 O2x_input = tk.Entry(left_frame, bg="white", fg="black", width=20)
 O2x_input.grid(row=1, column=0, padx=10, pady=(0, 10))
 
 # Coordenada y de O2
-O2y_label = tk.Label(left_frame, text="Coordenada y de O2", bg="#114045", fg="white")
+O2y_label = tk.Label(left_frame, text="Coordenada y de O2", bg="#29eaff", fg="black")
 O2y_label.grid(row=0, column=1, padx=10, pady=(10, 5))
 O2y_input = tk.Entry(left_frame, bg="white", fg="black", width=20)
 O2y_input.grid(row=1, column=1, padx=10, pady=(0, 10))
 
 # Coordenada x de O4
-O4x_label = tk.Label(left_frame, text="Coordenada x de O4", bg="#114045", fg="white")
+O4x_label = tk.Label(left_frame, text="Coordenada x de O4", bg="#29eaff", fg="black")
 O4x_label.grid(row=2, column=0, padx=10, pady=(10, 5))
 O4x_input = tk.Entry(left_frame, bg="white", fg="black", width=20)
 O4x_input.grid(row=3, column=0, padx=10, pady=(0, 10))
 
 # Coordenada y de O4
-O4y_label = tk.Label(left_frame, text="Coordenada y de O4", bg="#114045", fg="white")
+O4y_label = tk.Label(left_frame, text="Coordenada y de O4", bg="#29eaff", fg="black")
 O4y_label.grid(row=2, column=1, padx=10, pady=(10, 5))
 O4y_input = tk.Entry(left_frame, bg="white", fg="black", width=20)
 O4y_input.grid(row=3, column=1, padx=10, pady=(0, 10))
 
 # Coordenada x de P2
-P2x_label = tk.Label(left_frame, text="Coordenada x de P2", bg="#114045", fg="white")
+P2x_label = tk.Label(left_frame, text="Coordenada x de P2", bg="#29eaff", fg="black")
 P2x_label.grid(row=4, column=0, padx=10, pady=(10, 5))
 P2x_input = tk.Entry(left_frame, bg="white", fg="black", width=20)
 P2x_input.grid(row=5, column=0, padx=10, pady=(0, 10))
 
 # Coordenada y de P2
-P2y_label = tk.Label(left_frame, text="Coordenada y de P2", bg="#114045", fg="white")
+P2y_label = tk.Label(left_frame, text="Coordenada y de P2", bg="#29eaff", fg="black")
 P2y_label.grid(row=4, column=1, padx=10, pady=(10, 5))
 P2y_input = tk.Entry(left_frame, bg="white", fg="black", width=20)
 P2y_input.grid(row=5, column=1, padx=10, pady=(0, 10))
 
 # Coordenada x de P3
-P3x_label = tk.Label(left_frame, text="Coordenada x de P3", bg="#114045", fg="white")
+P3x_label = tk.Label(left_frame, text="Coordenada x de P3", bg="#29eaff", fg="black")
 P3x_label.grid(row=6, column=0, padx=10, pady=(10, 5))
 P3x_input = tk.Entry(left_frame, bg="white", fg="black", width=20)
 P3x_input.grid(row=7, column=0, padx=10, pady=(0, 10))
 
 # Coordenada y de P3
-P3y_label = tk.Label(left_frame, text="Coordenada y de P3", bg="#114045", fg="white")
+P3y_label = tk.Label(left_frame, text="Coordenada y de P3", bg="#29eaff", fg="black")
 P3y_label.grid(row=6, column=1, padx=10, pady=(10, 5))
 P3y_input = tk.Entry(left_frame, bg="white", fg="black", width=20)
 P3y_input.grid(row=7, column=1, padx=10, pady=(0, 10))
 
 # Slider "t1"
-slider_label1 = tk.Label(left_frame, text="Ángulo del acoplador en P1", bg="#114045", fg="white")
+slider_label1 = tk.Label(left_frame, text="Ángulo del acoplador en P1", bg="#29eaff", fg="black")
 slider_label1.grid(row=8, column=0, padx=10, pady=(10, 5))
 style = ttk.Style()
 style.configure("TScale", sliderrelief="flat", sliderthickness=20)
 slider1 = ttk.Scale(left_frame, from_=0, to=360, orient="horizontal", style="TScale", command=update_slider_value1)
 slider1.grid(row=9, column=0, padx=10, pady=(0, 10), sticky="nsew")
-value_label1 = tk.Label(left_frame, text="0 °", bg="#114045", fg="white", width=6)
+value_label1 = tk.Label(left_frame, text="0 °", bg="#030554", fg="white", width=6)
 value_label1.grid(row=10, column=0, padx=10, pady=(0, 10), sticky="nsew")
 
 # Slider "t2"
-slider_label2 = tk.Label(left_frame, text="Ángulo del acoplador en P2", bg="#114045", fg="white")
+slider_label2 = tk.Label(left_frame, text="Ángulo del acoplador en P2", bg="#29eaff", fg="black")
 slider_label2.grid(row=8, column=1, padx=10, pady=(10, 5))
 style = ttk.Style()
 style.configure("TScale", sliderrelief="flat", sliderthickness=20)
 slider2 = ttk.Scale(left_frame, from_=0, to=360, orient="horizontal", style="TScale", command=update_slider_value2)
 slider2.grid(row=9, column=1, padx=10, pady=(0, 10), sticky="nsew")
-value_label2 = tk.Label(left_frame, text="0 °", bg="#114045", fg="white", width=6)
+value_label2 = tk.Label(left_frame, text="0 °", bg="#030554", fg="white", width=6)
 value_label2.grid(row=10, column=1, padx=10, pady=(0, 10), sticky="nsew")
 
 # Slider "t3"
-slider_label3 = tk.Label(left_frame, text="Ángulo del acoplador en P3", bg="#114045", fg="white")
+slider_label3 = tk.Label(left_frame, text="Ángulo del acoplador en P3", bg="#29eaff", fg="black")
 slider_label3.grid(row=11, column=0, padx=10, pady=(10, 5))
 style = ttk.Style()
 style.configure("TScale", sliderrelief="flat", sliderthickness=20)
 slider3 = ttk.Scale(left_frame, from_=0, to=360, orient="horizontal", style="TScale", command=update_slider_value3)
 slider3.grid(row=12, column=0, padx=10, pady=(0, 10), sticky="nsew")
-value_label3 = tk.Label(left_frame, text="0 °", bg="#114045", fg="white", width=6)
+value_label3 = tk.Label(left_frame, text="0 °", bg="#030554", fg="white", width=6)
 value_label3.grid(row=13, column=0, padx=10, pady=(0, 10), sticky="nsew")
 
 # Botón "Calcular"
-configurar_button = tk.Button(left_frame, text="Calcular", bg="#2a808d", fg="white", width=15, relief="flat", command=update)
-configurar_button.grid(row=11, column=1, padx=10, pady=(10, 0))
+configurar_button = tk.Button(left_frame, text="CALCULAR", bg="red", fg="black", width=15, relief="flat", command=update)
+configurar_button.grid(row=12, column=1, padx=10, pady=(0, 0))
 
 #CONFIGURAR EL MARCO RIGHT CON LAS SALIDAS/RESULTADOS
 #Configurar Título
-resultados_label = tk.Label(right_frame, text="RESULTADOS", bg="#114045", fg="white")
-resultados_label.grid(row=0, column=0, padx=100, pady=(10, 5))
+resultados_label = tk.Label(right_frame, text="RESULTADOS", bg="#ed4242", fg="black", font=("TimesNewRoman", 15))
+resultados_label.grid(row=0, column=0, padx=40, pady=(10, 5))
 
 #Crear variables para los resultados
 l1 = tk.DoubleVar()
@@ -227,51 +228,51 @@ g2 = tk.DoubleVar()
 g3 = tk.DoubleVar()
 
 #Configurar resultado "Longitud del eslabón 1"
-l1_label = tk.Label(right_frame, text="Longitud del eslabón 1 (g):", bg="#114045", fg="white")
-l1_label.grid(row=1, column=0, padx=20, pady=(10, 5))
-value_l1_label = tk.Label(right_frame, textvariable=l1, bg="#114045", fg="white")
+l1_label = tk.Label(right_frame, text="Longitud del eslabón 1 (g):", bg="#6592db", fg="white")
+l1_label.grid(row=1, column=0, padx=10, pady=(10, 5))
+value_l1_label = tk.Label(right_frame, textvariable=l1, bg="#226ce3", fg="white")
 value_l1_label.grid(row=1, column=1, padx=10, pady=(10, 5))
 
 #Configurar resultado "Longitud del eslabón 2"
-l2_label = tk.Label(right_frame, text="Longitud del eslabón 2 (w):", bg="#114045", fg="white")
-l2_label.grid(row=2, column=0, padx=20, pady=(10, 5))
-value_l2_label = tk.Label(right_frame, textvariable=l2, bg="#114045", fg="white")
+l2_label = tk.Label(right_frame, text="Longitud del eslabón 2 (w):", bg="#6592db", fg="white")
+l2_label.grid(row=2, column=0, padx=10, pady=(10, 5))
+value_l2_label = tk.Label(right_frame, textvariable=l2, bg="#226ce3", fg="white")
 value_l2_label.grid(row=2, column=1, padx=10, pady=(10, 5))
 
 #Configurar resultado "Longitud del eslabón 3"
-l3_label = tk.Label(right_frame, text="Longitud del eslabón 3 (v):", bg="#114045", fg="white")
-l3_label.grid(row=3, column=0, padx=20, pady=(10, 5))
-value_l3_label = tk.Label(right_frame, textvariable=l3, bg="#114045", fg="white")
+l3_label = tk.Label(right_frame, text="Longitud del eslabón 3 (v):", bg="#6592db", fg="white")
+l3_label.grid(row=3, column=0, padx=10, pady=(10, 5))
+value_l3_label = tk.Label(right_frame, textvariable=l3, bg="#226ce3", fg="white")
 value_l3_label.grid(row=3, column=1, padx=10, pady=(10, 5))
 
 #Configurar resultado "Longitud del eslabón 4"
-l4_label = tk.Label(right_frame, text="Longitud del eslabón 4 (u):", bg="#114045", fg="white")
-l4_label.grid(row=4, column=0, padx=20, pady=(10, 5))
-value_l4_label = tk.Label(right_frame, textvariable=l4, bg="#114045", fg="white")
+l4_label = tk.Label(right_frame, text="Longitud del eslabón 4 (u):", bg="#6592db", fg="white")
+l4_label.grid(row=4, column=0, padx=10, pady=(10, 5))
+value_l4_label = tk.Label(right_frame, textvariable=l4, bg="#226ce3", fg="white")
 value_l4_label.grid(row=4, column=1, padx=10, pady=(10, 5))
 
 #Configurar resultado "Beta 2"
-b2_label = tk.Label(right_frame, text="Beta 2:", bg="#114045", fg="white")
-b2_label.grid(row=5, column=0, padx=20, pady=(10, 5))
-value_b2_label = tk.Label(right_frame, textvariable=b2, bg="#114045", fg="white")
+b2_label = tk.Label(right_frame, text="Beta 2:", bg="#6592db", fg="white")
+b2_label.grid(row=5, column=0, padx=10, pady=(10, 5))
+value_b2_label = tk.Label(right_frame, textvariable=b2, bg="#226ce3", fg="white")
 value_b2_label.grid(row=5, column=1, padx=10, pady=(10, 5))
 
 #Configurar resultado "Beta 3"
-b3_label = tk.Label(right_frame, text="Beta 3:", bg="#114045", fg="white")
+b3_label = tk.Label(right_frame, text="Beta 3:", bg="#6592db", fg="white")
 b3_label.grid(row=6, column=0, padx=20, pady=(10, 5))
-value_b3_label = tk.Label(right_frame, textvariable=b3, bg="#114045", fg="white")
+value_b3_label = tk.Label(right_frame, textvariable=b3, bg="#226ce3", fg="white")
 value_b3_label.grid(row=6, column=1, padx=10, pady=(10, 5))
 
 #Configurar resultado "Gamma 2"
-g2_label = tk.Label(right_frame, text="Gamma 2:", bg="#114045", fg="white")
+g2_label = tk.Label(right_frame, text="Gamma 2:", bg="#6592db", fg="white")
 g2_label.grid(row=7, column=0, padx=20, pady=(10, 5))
-value_g2_label = tk.Label(right_frame, textvariable=g2, bg="#114045", fg="white")
+value_g2_label = tk.Label(right_frame, textvariable=g2, bg="#226ce3", fg="white")
 value_g2_label.grid(row=7, column=1, padx=10, pady=(10, 5))
 
 #Configurar resultado "Gamma 3"
-g3_label = tk.Label(right_frame, text="Gamma 3:", bg="#114045", fg="white")
+g3_label = tk.Label(right_frame, text="Gamma 3:", bg="#6592db", fg="white")
 g3_label.grid(row=8, column=0, padx=20, pady=(10, 5))
-value_g3_label = tk.Label(right_frame, textvariable=g3, bg="#114045", fg="white")
+value_g3_label = tk.Label(right_frame, textvariable=g3, bg="#226ce3", fg="white")
 value_g3_label.grid(row=8, column=1, padx=10, pady=(10, 5))
 
 #Ejecutar la interfaz
